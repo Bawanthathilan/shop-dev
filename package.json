@@ -8,7 +8,9 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client \""
+    "dev": "concurrently \"npm run server\" \"npm run client \"",
+    "data:import":"node backend/seeder",
+    "data:destroy":"node backend/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/Bawanthathilan/shop-dev#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.14"
